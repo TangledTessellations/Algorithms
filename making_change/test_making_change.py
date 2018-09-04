@@ -9,15 +9,15 @@ class Test(unittest.TestCase):
   def test_making_change_small_amount(self):
     change_maker = MakingChange()
     
-    self.assertEqual(change_maker.making_change(0, self.denominations), 1)
-    self.assertEqual(change_maker.making_change(1, self.denominations), 1)
-    self.assertEqual(change_maker.making_change(5, self.denominations), 2)
-    self.assertEqual(change_maker.making_change(10, self.denominations), 4)
-    self.assertEqual(change_maker.making_change(20, self.denominations), 9)
-    self.assertEqual(change_maker.making_change(30, self.denominations), 18)
-    self.assertEqual(change_maker.making_change(100, self.denominations), 292)
-    self.assertEqual(change_maker.making_change(200, self.denominations), 2435)
-    self.assertEqual(change_maker.making_change(300, self.denominations), 9590)
+    self.assertEqual(change_maker.making_change_recursive(0, self.denominations), 1)
+    self.assertEqual(change_maker.making_change_recursive(1, self.denominations), 1)
+    self.assertEqual(change_maker.making_change_recursive(5, self.denominations), 2)
+    self.assertEqual(change_maker.making_change_recursive(10, self.denominations), 4)
+    self.assertEqual(change_maker.making_change_recursive(20, self.denominations), 9)
+    self.assertEqual(change_maker.making_change_recursive(30, self.denominations), 18)
+    self.assertEqual(change_maker.making_change_recursive(100, self.denominations), 292)
+    self.assertEqual(change_maker.making_change_recursive(200, self.denominations), 2435)
+    self.assertEqual(change_maker.making_change_recursive(300, self.denominations), 9590)
 
   def test_making_change_large_amount(self):
     change_maker = MakingChange()
